@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The header.
  *
@@ -14,24 +15,32 @@
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?> <?php twentytwentyone_the_html_classes(); ?>>
+
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<meta charset="<?php bloginfo('charset'); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="../twentytwentyone/assets/css/style.css">
+	<link rel="stylesheet" href=".\wp-content\themes\twentytwentyone\assets\css\style.css">
+	<!------ Include the above in your HEAD tag ---------->
+	
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content">
-		<?php
-		/* translators: Hidden accessibility text. */
-		esc_html_e( 'Skip to content', 'twentytwentyone' );
-		?>
-	</a>
+	<?php wp_body_open(); ?>
+	<div id="page" class="site">
+		<a class="skip-link screen-reader-text" href="#content">
+			<?php
+			/* translators: Hidden accessibility text. */
+			esc_html_e('Skip to content', 'twentytwentyone');
+			?>
+		</a>
 
-	<?php get_template_part( 'template-parts/header/site-header' ); ?>
+		<?php get_template_part('template-parts/header/site-header'); ?>
 
-	<div id="content" class="site-content">
-		<div id="primary" class="content-area">
-			<main id="main" class="site-main">
+		<div id="content" class="site-content">
+			<div id="primary" class="content-area">
+				<main id="main" class="site-main">
